@@ -21,8 +21,9 @@
   - [目录](#目录)
   - [功能说明](#功能说明)
   - [安装](#安装)
-    - [方式一：Chrome 应用商店（推荐）](#方式一chrome-应用商店推荐)
-    - [方式二：下载 zip 手动安装](#方式二下载-zip-手动安装)
+    - [方式一：直接下载 zip（国内用户推荐）](#方式一直接下载-zip国内用户推荐)
+    - [方式二：Chrome 应用商店](#方式二chrome-应用商店)
+    - [方式三：GitHub Releases](#方式三github-releases)
     - [各浏览器安装步骤](#各浏览器安装步骤)
   - [使用教程](#使用教程)
     - [第 1 步：打开支持的页面](#第-1-步打开支持的页面)
@@ -74,7 +75,20 @@
 
 ## 安装
 
-### 方式一：Chrome 应用商店（推荐）
+### 方式一：直接下载 zip（国内用户推荐）
+
+点击即可下载，无需登录、无需梯子：
+
+| 下载 | 适用浏览器 |
+| --- | --- |
+| **[Chrome 版 ⬇](https://www.anyaigc.ai/anyaigc-usd2rmb-chrome-v1.0.1.zip)** | Chrome、Edge、Opera、Brave、360、QQ 浏览器 |
+| [Firefox 版](https://github.com/AmazingRobin/AnyAIGC-usd2rmb/releases/latest) | Firefox（暂只在 GitHub 提供） |
+
+下载后按下面对应浏览器的[安装步骤](#各浏览器安装步骤)操作。
+
+> 手动安装的插件**不会自动更新**，需要你自己关注新版本。
+
+### 方式二：Chrome 应用商店
 
 > 商店链接将在插件通过审核后补充到这里。
 
@@ -82,19 +96,25 @@
 2. 点击「添加至 Chrome」
 3. 在弹出的确认框中点击「添加扩展程序」
 
-商店安装的优点是**自动更新** —— 有新版本时浏览器会自动升级，无需手动操作。
+商店安装的优点是**自动更新** —— 有新版本时浏览器会自动升级。
 
 Edge / Opera / Brave / 360 / QQ 浏览器都基于 Chromium，也可以直接访问
 Chrome 应用商店安装（Edge 首次访问会提示「允许来自其他商店的扩展」，点允许即可）。
 
-### 方式二：下载 zip 手动安装
+> ⚠️ **Chrome 应用商店在中国大陆无法直接访问**，国内用户请用[方式一](#方式一直接下载-zip国内用户推荐)下载。
 
-从 [Releases](https://github.com/AmazingRobin/AnyAIGC-usd2rmb/releases) 页面下载对应的 zip：
+### 方式三：GitHub Releases
+
+面向开发者，可获取历史版本和 `SHA256SUMS.txt` 校验文件：
+
+[github.com/AmazingRobin/AnyAIGC-usd2rmb/releases](https://github.com/AmazingRobin/AnyAIGC-usd2rmb/releases)
 
 | 文件名 | 适用浏览器 |
 | --- | --- |
 | `anyaigc-usd2rmb-chrome-vX.Y.Z.zip` | Chrome、Edge、Opera、Brave、360、QQ 浏览器 |
 | `anyaigc-usd2rmb-firefox-vX.Y.Z.zip` | Firefox |
+
+> GitHub 在国内访问不稳定，若打不开请用[方式一](#方式一直接下载-zip国内用户推荐)。
 
 下载后按下面对应浏览器的步骤安装。
 
@@ -105,7 +125,7 @@ Chrome 应用商店安装（Edge 首次访问会提示「允许来自其他商�
 <details open>
 <summary><b>Chrome</b></summary>
 
-1. 下载 `anyaigc-usd2rmb-chrome-vX.Y.Z.zip` 并**解压到一个固定的文件夹**
+1. 下载 **[Chrome 版 ⬇](https://www.anyaigc.ai/anyaigc-usd2rmb-chrome-v1.0.1.zip)** 并**解压到一个固定的文件夹**
    （比如 `D:\扩展\anyaigc-usd2rmb`）。
 
    > ⚠️ 解压后的文件夹**不要删除或移动**。Chrome 是直接从这个位置读取插件的，
@@ -126,11 +146,9 @@ Chrome 应用商店安装（Edge 首次访问会提示「允许来自其他商�
 <details>
 <summary><b>Microsoft Edge</b></summary>
 
-**推荐**：直接访问 Chrome 应用商店安装（见[方式一](#方式一chrome-应用商店推荐)）。
+使用 Chrome 版的 zip 即可（Edge 与 Chrome 同内核）。
 
-手动安装：
-
-1. 下载并解压 `anyaigc-usd2rmb-chrome-vX.Y.Z.zip` 到固定文件夹（不要删除）
+1. 下载 **[Chrome 版 ⬇](https://www.anyaigc.ai/anyaigc-usd2rmb-chrome-v1.0.1.zip)** 并解压到固定文件夹（不要删除）
 2. 地址栏输入 `edge://extensions/` 回车
 3. 打开左下角**「开发人员模式」**
 4. 点击**「加载解压缩的扩展」**
@@ -148,7 +166,7 @@ Firefox 的正式版**要求扩展必须经过 Mozilla 签名**，未签名的�
 
 1. 地址栏输入 `about:debugging#/runtime/this-firefox`
 2. 点击**「临时载入附加组件」**
-3. 直接选中 `anyaigc-usd2rmb-firefox-vX.Y.Z.zip` 文件本身（不用解压）
+3. 直接选中下载好的 **[Firefox 版 zip](https://github.com/AmazingRobin/AnyAIGC-usd2rmb/releases/latest)** 文件本身（不用解压）
 
 **B. 使用 Firefox Developer Edition / Nightly（永久安装）**
 
@@ -163,7 +181,7 @@ Firefox 的正式版**要求扩展必须经过 Mozilla 签名**，未签名的�
 <details>
 <summary><b>Opera</b></summary>
 
-1. 下载并解压 `anyaigc-usd2rmb-chrome-vX.Y.Z.zip` 到固定文件夹
+1. 下载 **[Chrome 版 ⬇](https://www.anyaigc.ai/anyaigc-usd2rmb-chrome-v1.0.1.zip)** 并解压到固定文件夹
 2. 地址栏输入 `opera://extensions` 回车
 3. 打开右上角**「开发者模式」**
 4. 点击**「加载已解压的扩展程序」**，选中解压出的文件夹
@@ -173,7 +191,7 @@ Firefox 的正式版**要求扩展必须经过 Mozilla 签名**，未签名的�
 <details>
 <summary><b>Brave</b></summary>
 
-1. 下载并解压 `anyaigc-usd2rmb-chrome-vX.Y.Z.zip` 到固定文件夹
+1. 下载 **[Chrome 版 ⬇](https://www.anyaigc.ai/anyaigc-usd2rmb-chrome-v1.0.1.zip)** 并解压到固定文件夹
 2. 地址栏输入 `brave://extensions/` 回车
 3. 打开右上角**「开发者模式」**
 4. 点击**「加载已解压的扩展程序」**，选中解压出的文件夹
@@ -183,7 +201,7 @@ Firefox 的正式版**要求扩展必须经过 Mozilla 签名**，未签名的�
 <details>
 <summary><b>360 极速浏览器 / 360 安全浏览器</b></summary>
 
-1. 下载并解压 `anyaigc-usd2rmb-chrome-vX.Y.Z.zip` 到固定文件夹
+1. 下载 **[Chrome 版 ⬇](https://www.anyaigc.ai/anyaigc-usd2rmb-chrome-v1.0.1.zip)** 并解压到固定文件夹
 2. 菜单 → **「更多工具」** → **「扩展程序」**（或地址栏 `se://extensions`）
 3. 打开**「开发者模式」**
 4. 点击**「加载已解压的扩展程序」**，选中解压出的文件夹
@@ -195,7 +213,7 @@ Firefox 的正式版**要求扩展必须经过 Mozilla 签名**，未签名的�
 <details>
 <summary><b>QQ 浏览器</b></summary>
 
-1. 下载并解压 `anyaigc-usd2rmb-chrome-vX.Y.Z.zip` 到固定文件夹
+1. 下载 **[Chrome 版 ⬇](https://www.anyaigc.ai/anyaigc-usd2rmb-chrome-v1.0.1.zip)** 并解压到固定文件夹
 2. 菜单 → **「工具」** → **「扩展」**
 3. 打开**「开发者模式」**
 4. 点击**「加载已解压的扩展程序」**，选中解压出的文件夹
@@ -475,6 +493,7 @@ anyaigc-usd2rmb/
 │   ├── build.mjs               打包成各浏览器的 zip（零依赖）
 │   ├── check.mjs               构建前自检
 │   ├── e2e.mjs                 端到端测试（需 playwright）
+│   ├── verify-links.mjs        校验下载直链真实可用且与本地构建一致
 │   └── make_icons.py           生成图标（需 Pillow）
 ├── docs/
 │   ├── PUBLISHING.md           Chrome 商店上架详细步骤

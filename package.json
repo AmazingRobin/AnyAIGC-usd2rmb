@@ -10,6 +10,7 @@
     "build:chrome": "node scripts/build.mjs chrome",
     "build:firefox": "node scripts/build.mjs firefox",
     "check": "node scripts/check.mjs",
+    "verify-links": "node scripts/verify-links.mjs",
     "icons": "python scripts/make_icons.py"
   },
   "engines": {

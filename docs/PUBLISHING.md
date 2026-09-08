@@ -200,12 +200,41 @@ https://github.com/AmazingRobin/AnyAIGC-usd2rmb/blob/main/PRIVACY.md
 1. 同步修改两份 manifest 的 `version`（`check.mjs` 会校验一致性）：
    - `src/manifest.chrome.json`
    - `src/manifest.firefox.json`
-2. `node scripts/check.mjs && node scripts/build.mjs chrome`
-3. 在开发者控制台进入已有项目 → **「软件包」** → 上传新 zip
-4. 若功能有变化，更新详细说明
-5. 提交审核
+2. `node scripts/check.mjs && node scripts/build.mjs`
+3. 打标签发布到 GitHub：`git tag vX.Y.Z && git push origin vX.Y.Z`
+   （Actions 会自动构建并创建 Release）
+4. **把新的两个 zip 上传到 anyaigc.ai 站点根目录** ⚠️
+5. **更新 README 中的下载直链版本号**（共 7 处，见下文）
+6. 在开发者控制台进入已有项目 → **「软件包」** → 上传新 zip
+7. 若功能有变化，更新详细说明
+8. 提交审核
 
 > 版本号只能递增，不能重复上传同一版本号。
+
+### 关于站点直链
+
+README 的主推下载渠道是站点直链（面向国内用户，Chrome 商店和 GitHub 在大陆均访问受限）：
+
+```
+https://www.anyaigc.ai/anyaigc-usd2rmb-chrome-vX.Y.Z.zip
+https://www.anyaigc.ai/anyaigc-usd2rmb-firefox-vX.Y.Z.zip
+```
+
+**链接必须带版本号。** 站点是单页应用，任何不存在的路径都会返回 HTTP 200 加一个
+HTML 兜底页，而不是 404 —— 意味着 `anyaigc-usd2rmb-chrome.zip` 这类「latest」命名
+看起来能访问，实际下到的是 HTML 文件，用户会拿到一个损坏的包。
+
+若想提供不随版本变化的固定链接，需要在服务器上真实放置一份该文件名的副本，
+并在每次发版时覆盖它。
+
+发布后建议校验站点文件与本地构建一致：
+
+```bash
+curl -sL -o /tmp/site.zip https://www.anyaigc.ai/anyaigc-usd2rmb-chrome-vX.Y.Z.zip
+sha256sum /tmp/site.zip dist/anyaigc-usd2rmb-chrome-vX.Y.Z.zip
+```
+
+两个哈希应完全一致。若不一致，说明上传的是旧包或传输中损坏。
 
 ---
 
