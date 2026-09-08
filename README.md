@@ -1,4 +1,4 @@
-# AnyAIGC 价格人民币换算
+# AnyAIGC 汇率助手
 
 一个浏览器插件，在 [AnyAIGC](https://anyaigc.ai/) 的**模型广场**和**使用日志**页面加一个币种切换开关，
 把页面上的美元价格按你自己填的汇率换算成人民币显示。
@@ -346,7 +346,7 @@ xcrun safari-web-extension-converter dist/chrome --project-location ./safari
 <summary><b>怎么卸载？</b></summary>
 
 打开 `chrome://extensions/`（Edge 是 `edge://extensions/`），
-找到「AnyAIGC 价格人民币换算」，点「移除」。你保存的汇率设置会一并删除。
+找到「AnyAIGC 汇率助手」，点「移除」。你保存的汇率设置会一并删除。
 
 </details>
 
@@ -398,8 +398,8 @@ node scripts/build.mjs firefox
 
 ```
 dist/
-├── anyaigc-usd2rmb-chrome-v1.0.0.zip     ← 上传商店 / 分发给用户
-├── anyaigc-usd2rmb-firefox-v1.0.0.zip
+├── anyaigc-usd2rmb-chrome-vX.Y.Z.zip     ← 上传商店 / 分发给用户
+├── anyaigc-usd2rmb-firefox-vX.Y.Z.zip
 ├── chrome/                                ← 解压目录，开发时直接「加载已解压的扩展程序」
 └── firefox/
 ```
@@ -444,7 +444,7 @@ node scripts/e2e.mjs
 
 1. `node scripts/check.mjs && node scripts/build.mjs chrome`
 2. 打开 [Chrome 开发者控制台](https://chrome.google.com/webstore/devconsole)
-3. 「新增项目」→ 上传 `dist/anyaigc-usd2rmb-chrome-v1.0.0.zip`
+3. 「新增项目」→ 上传 `dist/anyaigc-usd2rmb-chrome-vX.Y.Z.zip`
 4. 填写商店信息（描述文案、截图、分类）
 5. 在「隐私权规范」中声明**不收集任何用户数据**，并说明 `storage` 权限用途
 6. 提交审核（通常 1-3 个工作日）

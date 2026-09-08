@@ -218,7 +218,7 @@ function main() {
   const version = readVersion();
   fs.mkdirSync(DIST, { recursive: true });
 
-  console.log(`\n打包 AnyAIGC 价格人民币换算 v${version}\n`);
+  console.log(`\n打包 AnyAIGC 汇率助手 v${version}\n`);
   names.forEach((name) => {
     const result = buildTarget(name, version);
     const kb = (result.size / 1024).toFixed(1);

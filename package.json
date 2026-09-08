@@ -1,6 +1,6 @@
 {
   "name": "anyaigc-usd2rmb",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "AnyAIGC 模型广场 / 使用日志 美元→人民币价格换算浏览器插件",
   "license": "MIT",

@@ -235,7 +235,11 @@ try {
   const page2 = await context.newPage();
   await page2.goto('https://anyaigc.ai/pricing', { waitUntil: 'domcontentloaded', timeout: 60000 });
   await page2.waitForSelector(PANEL, { timeout: 45000 });
-  await page2.waitForTimeout(1500);
+  // 面板会先于价格表格渲染出来，固定等待时长容易在价格还没加载时就断言。
+  // 这里等「换算已实际发生」这个条件，避免竞态。
+  await page2
+    .waitForFunction(() => /¥\d/.test(document.body.innerText), { timeout: 30000 })
+    .catch(() => {});
   const persisted = await page2.evaluate(() => ({
     rate: document.querySelector('#anyaigc-price-currency-panel input')?.value,
     rmbActive: !!document.querySelector(

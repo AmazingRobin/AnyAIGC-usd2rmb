@@ -9,7 +9,7 @@
 
 ```bash
 node scripts/check.mjs          # 必须通过，不能有「失败」项
-node scripts/build.mjs chrome   # 产出 dist/anyaigc-usd2rmb-chrome-v1.0.0.zip
+node scripts/build.mjs chrome   # 产出 dist/anyaigc-usd2rmb-chrome-vX.Y.Z.zip
 ```
 
 自检会拦下这几类会导致上传被拒或审核被打回的问题：
@@ -34,7 +34,7 @@ node scripts/build.mjs chrome   # 产出 dist/anyaigc-usd2rmb-chrome-v1.0.0.zip
 
 | 素材 | 规格 | 来源 |
 | --- | --- | --- |
-| 扩展包 | zip | `dist/anyaigc-usd2rmb-chrome-v1.0.0.zip` |
+| 扩展包 | zip | `dist/anyaigc-usd2rmb-chrome-vX.Y.Z.zip` |
 | 商店图标 | 128×128 PNG | `icons/icon-128.png` |
 | 截图 | 1280×800 或 640×400 PNG/JPG，**至少 1 张，最多 5 张** | 需自己截 |
 | 简短说明 | ≤ 132 字符 | 见 [STORE_LISTING.md](STORE_LISTING.md) |
@@ -84,7 +84,7 @@ print('已保存 dist/screenshot-1280x800.png')
 
 1. 打开 [Chrome 开发者控制台](https://chrome.google.com/webstore/devconsole)
 2. 点击 **「新增项目」**
-3. 上传 `dist/anyaigc-usd2rmb-chrome-v1.0.0.zip`
+3. 上传 `dist/anyaigc-usd2rmb-chrome-vX.Y.Z.zip`
 4. 等待解析完成，进入项目配置页
 
 ---
@@ -93,7 +93,7 @@ print('已保存 dist/screenshot-1280x800.png')
 
 | 字段 | 填什么 |
 | --- | --- |
-| 名称 | `AnyAIGC 价格人民币换算` |
+| 名称 | `AnyAIGC 汇率助手` |
 | 简短说明 | 见 [STORE_LISTING.md](STORE_LISTING.md) |
 | 详细说明 | 见 [STORE_LISTING.md](STORE_LISTING.md) |
 | 类别 | **工具** |
