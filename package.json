@@ -1,0 +1,18 @@
+{
+  "name": "anyaigc-usd2rmb",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AnyAIGC 模型广场 / 使用日志 美元→人民币价格换算浏览器插件",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "build:chrome": "node scripts/build.mjs chrome",
+    "build:firefox": "node scripts/build.mjs firefox",
+    "check": "node scripts/check.mjs",
+    "icons": "python scripts/make_icons.py"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

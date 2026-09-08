@@ -1,0 +1,98 @@
+/**
+ * 币种切换面板样式
+ *
+ * 这里的样式通过 manifest 的 content_scripts.css 注入。浏览器注入的样式表不受
+ * 页面 CSP 的 style-src 限制，比在 JS 里插入 <style> 更可靠。
+ *
+ * 所有规则都限定在 #anyaigc-price-currency-panel 作用域内（.anyaigc-rmb-price 除外，
+ * 它需要作用于站点自身的价格元素），避免影响页面原有样式。
+ */
+
+#anyaigc-price-currency-panel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-sizing: border-box;
+  padding: 8px 12px;
+  color: #222;
+  font: 16px/1.25 -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+}
+
+#anyaigc-price-currency-panel .anyaigc-currency-switch {
+  display: inline-flex;
+  overflow: hidden;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+}
+
+#anyaigc-price-currency-panel button {
+  margin: 0;
+  border: 0;
+  padding: 10px 16px;
+  background: #fff;
+  color: #555;
+  cursor: pointer;
+  font: inherit;
+}
+
+#anyaigc-price-currency-panel button:hover {
+  background: #f5f5f5;
+}
+
+#anyaigc-price-currency-panel button.is-active {
+  background: #1677ff;
+  color: #fff;
+}
+
+#anyaigc-price-currency-panel button.is-active:hover {
+  background: #1677ff;
+}
+
+#anyaigc-price-currency-panel button[data-currency="RMB"].is-active,
+#anyaigc-price-currency-panel button[data-currency="RMB"].is-active:hover {
+  background: #009035;
+}
+
+/* 键盘导航时保留清晰的焦点圈，浏览器默认样式在深色按钮上常常看不见。 */
+#anyaigc-price-currency-panel button:focus-visible,
+#anyaigc-price-currency-panel input:focus-visible {
+  outline: 2px solid #1677ff;
+  outline-offset: 2px;
+}
+
+#anyaigc-price-currency-panel label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  white-space: nowrap;
+  color: #555;
+}
+
+#anyaigc-price-currency-panel input {
+  box-sizing: border-box;
+  width: 74px;
+  margin: 0;
+  padding: 9px 10px;
+  border: 1px solid #d9d9d9;
+  border-radius: 7px;
+  background: #fff;
+  color: #222;
+  font: inherit;
+}
+
+#anyaigc-price-currency-panel .anyaigc-apply-rate {
+  border-radius: 8px;
+  background: #1677ff;
+  color: #fff;
+  white-space: nowrap;
+}
+
+#anyaigc-price-currency-panel .anyaigc-apply-rate:hover {
+  background: #0958d9;
+}
+
+/* 已换算成人民币的价格标绿，让用户一眼看出当前不是原始美元价。
+   站点自身的颜色声明优先级较高，这里需要 !important 才能覆盖。 */
+.anyaigc-rmb-price {
+  color: #009035 !important;
+}

@@ -1,0 +1,10 @@
+# 强制所有文本文件在仓库中使用 LF。
+#
+# 这一点对本项目很重要：构建是可复现的（相同源码产出字节一致的 zip），
+# 而 CRLF/LF 的差异会改变文件字节，导致不同平台上构建出的 zip 的 sha256 不一致。
+* text=auto eol=lf
+
+# 二进制文件不做任何换行转换
+*.png binary
+*.zip binary
+*.xpi binary
