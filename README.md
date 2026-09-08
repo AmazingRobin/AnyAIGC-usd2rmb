@@ -79,7 +79,7 @@ Chrome 应用商店安装（Edge 首次访问会提示「允许来自其他商�
 
 ### 方式二：下载 zip 手动安装
 
-从本仓库的 [Releases](../../releases) 页面下载对应的 zip：
+从 [Releases](https://github.com/AmazingRobin/AnyAIGC-usd2rmb/releases) 页面下载对应的 zip：
 
 | 文件名 | 适用浏览器 |
 | --- | --- |
@@ -380,8 +380,8 @@ xcrun safari-web-extension-converter dist/chrome --project-location ./safari
 需要 **Node.js 18+**。项目**零运行时依赖**，不需要 `npm install`。
 
 ```bash
-git clone <你的仓库地址>
-cd anyaigc-usd2rmb
+git clone https://github.com/AmazingRobin/AnyAIGC-usd2rmb.git
+cd AnyAIGC-usd2rmb
 
 # 自检：验证 manifest、文件完整性、脚本语法
 node scripts/check.mjs

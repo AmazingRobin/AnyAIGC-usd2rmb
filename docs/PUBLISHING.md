@@ -167,7 +167,7 @@ print('已保存 dist/screenshot-1280x800.png')
 填写仓库中 [PRIVACY.md](../PRIVACY.md) 的 GitHub 在线地址，例如：
 
 ```
-https://github.com/<你的用户名>/anyaigc-usd2rmb/blob/main/PRIVACY.md
+https://github.com/AmazingRobin/AnyAIGC-usd2rmb/blob/main/PRIVACY.md
 ```
 
 > 必须是**公开可访问**的链接。仓库如果是 private，审核会因为打不开而被打回 ——
